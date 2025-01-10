@@ -1,0 +1,1 @@
+This repository contains the Firewall Simulator project made by me and my friend Siddharth using python. To show the working of our project we have added Graphs and logging of our algorithm being applied on a random set of data. You can read more info in our project report made by me and the flowcharts.
