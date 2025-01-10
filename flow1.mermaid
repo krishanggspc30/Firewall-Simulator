@@ -1,0 +1,13 @@
+graph TD
+    A[Start] -->|Generate| B[Network Packet]
+    B -->|Input| C[Firewall]
+    C -->|Compare| D{Rule Matching}
+    D -->|Match Found| E{Block Rule?}
+    D -->|No Match| F[Allow Packet]
+    E -->|Yes| G[Block Packet]
+    E -->|No| F
+    F --> H[Log Packet: Allowed]
+    G --> I[Log Packet: Blocked]
+    H --> J[End]
+    I --> J
+    J -->|Next Packet| B

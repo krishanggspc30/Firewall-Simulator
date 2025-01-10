@@ -1,0 +1,23 @@
+graph TD
+    User(("User"))
+    System(("System"))
+    
+    UC1["Configure Rules"]
+    UC2["Run Simulation"]
+    UC3["Filter Packets"]
+    UC4["Log Results"]
+    UC5["Generate Visuals"]
+    UC6["Analyze Logs"]
+    
+    User -->|Interacts with| UC1
+    User -->|Initiates| UC2
+    User -->|Reviews| UC6
+    
+    System -->|Executes| UC3
+    System -->|Performs| UC4
+    System -->|Creates| UC5
+    
+    UC2 -->|Triggers| UC3
+    UC3 -->|Leads to| UC4
+    UC4 -->|Enables| UC5
+    UC5 -->|Supports| UC6
